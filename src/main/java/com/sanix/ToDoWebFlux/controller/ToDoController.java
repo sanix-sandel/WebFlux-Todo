@@ -19,11 +19,11 @@ public class ToDoController {
 
     @GetMapping("/todo/{id}")
     public Mono<ToDo> getToDo(@PathVariable String id){
-        return this.toDoRepository.findById(id);
+        return toDoRepository.findById(id);
     }
 
     @GetMapping("/todo")
     public Flux<ToDo> getToDos(){
-        return this.toDoRepository.findAll();
+        return toDoRepository.findAll();
     }
 }
